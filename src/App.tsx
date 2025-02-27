@@ -23,6 +23,8 @@ function App() {
       <section
         id="home"
         className="relative h-[100vh] bg-[#588157] flex items-center"
+        style={{backgroundImage: `url("https://static.vecteezy.com/system/resources/thumbnails/033/129/369/small_2x/3d-rendered-law-legal-system-justice-crime-concept-mallet-gavel-hammer-and-scales-on-table-ai-generative-photo.jpg")`, 
+                backgroundSize: "100%"}}
       >
         <div className="absolute inset-0 bg-black opacity-30"></div>
         <div className="container mx-auto px-6 relative z-10">
@@ -198,7 +200,9 @@ function App() {
       </section>
 
       {/* Team Section */}
-      <section id="attorneys" className="py-20 bg-white">
+      <section id="attorneys" className="py-20 bg-white" style={{
+        alignItems: 'center'
+      }}>
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-[#588157] mb-4">
@@ -210,21 +214,19 @@ function App() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div >
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
+          }}>
             {[
               {
                 name: 'Keshav Jha',
                 role: 'Founding Partner',
                 image:
-                  'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=776&q=80',
-                bio: 'With over 25 years of experience, Keshav leads our corporate law practice with unparalleled expertise.',
-              },
-              {
-                name: 'Mausam Sahni',
-                role: 'Partner',
-                image:
-                  'https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-                bio: 'Jennifer brings expertise in family law with a compassionate approach to sensitive legal matters.',
+                  'src/Assets/Keshav.jpeg',
+                bio: 'Keshav Jha leads commercial, civil, criminal, matrimonial practice with unparalleled expertise.',
               },
             ].map((member, index) => (
               <div
@@ -248,12 +250,13 @@ function App() {
               </div>
             ))}
           </div>
+          </div>
 
-          <div className="text-center mt-12">
+          {/* <div className="text-center mt-12">
             <button className="bg-[#588157] text-white px-6 py-3 rounded-md font-medium hover:bg-[#a3b18a] transition duration-300">
               View All Attorneys
             </button>
-          </div>
+          </div> */}
         </div>
       </section>
 
