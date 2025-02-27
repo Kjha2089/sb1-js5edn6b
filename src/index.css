@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Accounts for the fixed navbar height */
+}
+
+body {
+  overflow-x: hidden;
+}
