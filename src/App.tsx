@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
+
 import {
   Briefcase as BriefcaseLaw,
   Phone,
@@ -13,10 +15,18 @@ import {
 } from 'lucide-react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import Disc from './components/disclaimer.tsx'
+
+type discProp = {
+  overlay: boolean;
+};
 
 function App() {
+  const [overlay, setOverlay] = useState(true);
+
   return (
     <div className="min-h-screen bg-[#dad7cd]">
+     <Disc overlay={overlay} setOverlay={setOverlay} />
       <Navbar />
 
       {/* Hero Section */}
