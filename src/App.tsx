@@ -235,7 +235,7 @@ function App() {
               {
                 name: 'Keshav Jha',
                 role: 'Founding Partner',
-                image: "https://media-hosting.imagekit.io//a1b880a47b264b12/WhatsApp%20Image%202025-02-27%20at%206.55.32%20PM.jpeg?Expires=1835438589&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=0Z0vhM9wq2lW~Uv19YO2BJTmdwBThBG1LiEXYP6OlCxqMwlzQ7wlj6PqDVSws6mLNEBlGCP7OGvJMt7hgvId11lTX7U64DcAq6bD3hRXfwREtzR9y3yL2gLmDOugpAzFzgEnE1VmdCrULiA3qFCq8ZtdbP7FV4YvtN~ACYV33DjUkS5JPlCIYD-CL9ZxDzMeMG8k1tozI9~ZwJ3pHgXQYB2e4JUX9~l~HFm1NRFXStznVzcLK-Vhz5hxrfs0N4cSJPDrORF79egFaRsv-OfAmpRIq97E7PdTEPHlilvIk1yS3ry0T7iapvUQCBCCDs8HveW4Seh4vKKSLVK~15Xidw__",
+                image: "https://media-hosting.imagekit.io//b730de2a67804fcf/keshav.jpg?Expires=1835439510&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=c1j0~Bbt3-j1nieSQePQGSEQfEe2Q0Kq3WGptiSeaWxGIPXM7a~Z7BucS3i1t93ksAjrfj6qGNUzK9L6pIxHS-239YPCyfWJuAr~HZa01742I6UnUhgkB11uZXyUpc06GLdmH2ka2~zHFXZio3JnssTb6p~jEjZiIJ-xWVhW6yFZCZVsEe39wxyGAfmNKNyxRfnQPLBdQ8MpJfxAxkCpTBJCaeEZa1p0yheQt9tjIFYgs9iX2XBdw58CqIdhcmoHPVWEjy0SdPVu49qBRCgHVid9VZM4pDsyHVzqmPEzSrDHJOZJhnQrAmGg7Q1EPwd87q996uIZfAqcru7ss1ArSQ__",
                 bio: 'Keshav Jha leads commercial, civil, criminal, matrimonial practice with unparalleled expertise.',
               },
             ].map((member, index) => (
