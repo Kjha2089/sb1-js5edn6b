@@ -235,7 +235,7 @@ function App() {
                 name: 'Keshav Jha',
                 role: 'Founding Partner',
                 image:
-                  './src/Assets/Keshav.jpeg',
+                  './dist/assets/Keshav.jpeg',
                 bio: 'Keshav Jha leads commercial, civil, criminal, matrimonial practice with unparalleled expertise.',
               },
             ].map((member, index) => (
