@@ -73,7 +73,7 @@ const Navbar = () => {
               onClick={() => scrollToSection('contact')}
               className="bg-[#588157] text-white px-4 py-2 rounded-md font-medium hover:bg-[#a3b18a] transition duration-300"
             >
-              Free Consultation
+              +91 9718836537
             </button>
           </div>
 
