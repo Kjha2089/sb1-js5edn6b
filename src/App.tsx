@@ -228,7 +228,8 @@ function App() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" style={{
             display: 'flex',
             alignItems: 'center',
-            justifyContent: 'center'
+            justifyContent: 'center',
+            objectFit: 'fill',
           }}>
             {[
               
@@ -246,7 +247,7 @@ function App() {
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-full h-64 object-cover"
+                  className="w-full h-full object-scale-down"
                 />
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-[#588157] mb-1">
