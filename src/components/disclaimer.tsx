@@ -40,8 +40,7 @@ const Disc: FC<props> = ({overlay, setOverlay }) => {
 				<p>
 					{' '}
 					Any user of this website is warned that the contents stated herein are
-					not guaranteed to be accurate, up-to-date or complete. Century Law
-					Firm disclaims all responsibilities and liabilities for interpretation
+					not guaranteed to be accurate, up-to-date or complete. Keshav Jha & Associates disclaims all responsibilities and liabilities for interpretation
 					or use of information contained on this website nor does it offer any
 					warranty expressed or implied. The information provided under this
 					website is solely available at your request for informational purposes

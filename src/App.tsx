@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import React, { useState, useRef } from 'react';
+
 
 
 import {
@@ -24,11 +24,55 @@ type discProp = {
 
 function App() {
   const [overlay, setOverlay] = useState(true);
+  const [isLoading, setIsLoading] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const formRef = useRef(null);
+
+
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+      setIsMenuOpen(false);
+    }
+  };
+
+  //reset directly not working therefore working my way around becoz of typescript
+  const resetButton = () => {
+    if(formRef.current === null) return;
+
+    (formRef.current as HTMLFormElement).reset();
+  }
+  
+  const scriptUrl = "https://script.google.com/macros/s/AKfycbxOvyIKoh3o4vUH0pGQCzycBq99TivhO0P1HVrldKDqpPE6-8r5rJn6VlWrsyvLCuu4rQ/exec";
+  
+ 
+
+  function handleSubmit(e: { preventDefault: () => void; }){
+      e.preventDefault();
+
+      if(formRef.current === null) return;
+
+      setIsLoading(true);
+      fetch(scriptUrl, {
+        method: 'POST',
+        body: new FormData(formRef.current),
+      })
+        .then((res) => {
+          console.log('succesfully submitted query');
+        })
+        .catch((err) => console.log(err));
+        
+        resetButton();
+        setIsLoading(false);
+
+  }
 
   return (
     <div className="min-h-screen bg-[#dad7cd]">
      <Disc overlay={overlay} setOverlay={setOverlay} />
-      <Navbar />
+      <Navbar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen}/>
 
       {/* Hero Section */}
       <section
@@ -56,7 +100,7 @@ function App() {
               name in the legal community, renowned for his commitment to
               excellence and justice.
             </p>
-            <button className="bg-white text-[#588157] px-6 py-3 rounded-md font-medium hover:bg-[#a3b18a] hover:text-white transition duration-300">
+            <button className="bg-white text-[#588157] px-6 py-3 rounded-md font-medium hover:bg-[#a3b18a] hover:text-[#a3b18a] transition duration-300" onClick={() => scrollToSection('contact')}>
               Schedule Consultation
             </button>
           </div>
@@ -197,8 +241,8 @@ function App() {
                 <p className="text-gray-700">{area.description}</p>
                 {area.list ? (
                   <ul className="text-gray-700 ">
-                    {area.list.map((x) => (
-                      <li>{x}</li>
+                    {area.list.map((x,i) => (
+                      <li key={i}>{x}</li>
                     ))}
                   </ul>
                 ) : (
@@ -378,7 +422,7 @@ function App() {
             </div>
 
             <div className="md:w-1/2">
-              <form className="bg-[#dad7cd] p-8 rounded-lg shadow-md">
+              <form className="bg-[#dad7cd] p-8 rounded-lg shadow-md" ref={formRef} onSubmit={handleSubmit}>
                 <div className="mb-6">
                   <label
                     htmlFor="name"
@@ -388,9 +432,10 @@ function App() {
                   </label>
                   <input
                     type="text"
-                    id="name"
+                    name="name"
                     className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#588157]"
                     placeholder="Your Name"
+                    required
                   />
                 </div>
 
@@ -403,7 +448,7 @@ function App() {
                   </label>
                   <input
                     type="email"
-                    id="email"
+                    name="email"
                     className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#588157]"
                     placeholder="abc@gmail.com"
                   />
@@ -418,9 +463,10 @@ function App() {
                   </label>
                   <input
                     type="tel"
-                    id="phone"
+                    name="phone"
                     className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#588157]"
                     placeholder="Your Number"
+                    required
                   />
                 </div>
 
@@ -432,8 +478,9 @@ function App() {
                     Service Needed
                   </label>
                   <select
-                    id="service"
+                    name="service"
                     className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#588157]"
+                    required
                   >
                     <option value="">Select a service</option>
                     <option value="corporate">Corporate Law</option>
@@ -454,7 +501,7 @@ function App() {
                     Your Message
                   </label>
                   <textarea
-                    id="message"
+                    name="message"
                     rows={4}
                     className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#588157]"
                     placeholder="Please describe your legal needs..."
@@ -465,7 +512,7 @@ function App() {
                   type="submit"
                   className="w-full bg-[#588157] text-white px-6 py-3 rounded-md font-medium hover:bg-[#a3b18a] transition duration-300"
                 >
-                  Submit Inquiry
+                  {isLoading ? 'Loading...':'Submit Inquiry'}
                 </button>
               </form>
             </div>

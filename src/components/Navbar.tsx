@@ -1,8 +1,15 @@
-import React, { useState } from 'react';
+import React, { FC } from 'react';
 import { Briefcase as BriefcaseLaw, Menu, X } from 'lucide-react';
 
-const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+interface props{
+  isMenuOpen: boolean,
+  setIsMenuOpen: Function,
+  
+// any props that come into the component
+}
+
+const Navbar: FC<props> = ({isMenuOpen, setIsMenuOpen}) => {
+  //const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
