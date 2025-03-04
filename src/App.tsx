@@ -107,7 +107,7 @@ function App() {
             <div className="hidden md:block md:w-2/5 pl-8">
               <div className="bg-white p-4 rounded-lg shadow-lg">
                 <img 
-                  src="src/heroPhoto.jpeg" 
+                  src="https://media-hosting.imagekit.io//aa4291ddf7e44a8b/heroPhoto.jpeg?Expires=1835709767&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=DqRoh4aqqZ51WkdWpQLuYnv9zCF2g2lJVKq6~h0v9jgKDh59mjHT~dkQegm4WBvfCO66RFqZXcqC-aFpfoqr5CbCp-PmRC1Iih1hEyG0eTEyaoyUrh~EQv3AXP38R7yDRlQM3sQGmJ4DkcHtk3deoeVtvcVQrcCm7Is4Yrpod9RR03-51Y~ooH21zTxZKfX3MmX8lvugNV76~gS3REG6GE7CppJg8zRnmWB0~UDRRxq3un6F-Pjv1o7onltXJyrtOxdC3bP-ylarxdT5UO-bVFTfg-EFcITdbFLqQVw6lKnX5ggyTVfq0LtpXub3LEBL0D9apCCIgQBStnyZ7jRMLQ__" 
                   alt="Legal Services" 
                   className="w-full h-auto rounded-md object-cover"
                 />
@@ -174,7 +174,7 @@ function App() {
             {[
               {
                 // icon: <Scale className="h-10 w-10 text-[#588157]" />,
-                icon: <img className='w-full h-auto rounded-md object-cover' src='src/commercial.jpeg' />,
+                icon: <img className='w-full h-auto rounded-md object-cover' src='https://iili.io/338DHMB.jpg' />,
                 title: 'Commercial Cases',
                 description:
                   'Keshav jha and associates provides litigation support in disputes such as contract law, property cases, N.I cases, and corporate cases. We further provide legal consultancy to businesses in drafting, negotiating and enforcing contracts involving a wide range of commercial cases',
@@ -187,14 +187,14 @@ function App() {
                 ],
               },
               {
-                icon: <img className='w-full h-auto rounded-md object-cover' src='src/corporate.jpeg' />,
+                icon: <img className='w-full h-auto rounded-md object-cover' src='https://media-hosting.imagekit.io//bb07d0ff2fde435a/WhatsApp%20Image%202025-03-04%20at%2020.16.41.jpeg?Expires=1835709847&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=wVDiC~1Sbe9W1gXPlEwLdkhvqWe1KMNqc1NETY4PR3F5HrGJgv4f7NtwPV1aL3T-Bc~bQFr9f77ERwOEoYZumLqQ167QCYc8raz-TjxdZbO-r1LR9ANEdvA7rFyEdx0sTwR9i47JusWChsBSHvlfaxLWV4oLbaf4EmDsrfxHf3ACBL0vKHjaLy1PhdnxfsYLBL85vQDu5Ut8b9X9aBb7s-cqIUUTJYhtDMkXNrLBrBku8~ujevrUhfLe2fVe9AmNV9EnqjLlkWmQsK5U4ddnEr5DnYGqb9E99dnq-zFJrgizrS8ys9q69OApiOSSCc2PfNdCvBtxY5aRBeJt9udwMw__' />,
                 title: 'Corporate Law',
                 description:
                   'Expert guidance on business formation, contracts, mergers and acquisitions, and corporate governance.',
               },
               {
                 // icon: <Users className="h-10 w-10 text-[#588157]" />,
-                icon: <img className='w-full h-auto rounded-md object-cover' src='src/matri.jpg' />,
+                icon: <img className='w-full h-auto rounded-md object-cover' src='https://iili.io/338DF8g.jpg' />,
                 title: 'Matrimonial Cases',
                 description:
                   'Compassionate representation in divorce, child custody, adoption, and other family matters.',
@@ -207,7 +207,7 @@ function App() {
                 ],
               },
               {
-                icon: <img className='w-full h-auto rounded-md object-cover' src='src/criminal.jpeg' />,
+                icon: <img className='w-full h-auto rounded-md object-cover' src='https://iili.io/338D9nV.jpg' />,
                 title: 'Criminal Cases',
                 description: 'Our service include:',
                 list: [
@@ -222,7 +222,7 @@ function App() {
               },
 
               {
-                icon: <img className='w-full h-auto rounded-md object-cover' src='src/civil2.jpg' />,
+                icon: <img className='w-full h-auto rounded-md object-cover' src='https://iili.io/338D3cF.jpg' />,
                 title: 'Civil Cases',
                 description:
                   'Skilled representation in civil litigation, dispute resolution, and trial advocacy.',
@@ -236,12 +236,12 @@ function App() {
                 ],
               },
               {
-                icon: <img className='w-full h-auto rounded-md object-cover' src='src/cheque.jpeg' />,
+                icon: <img className='w-full h-auto rounded-md object-cover' src= "https://iili.io/338tpZQ.jpg" />,
                 title: 'Cheque Bounce Cases',
                 description: '',
               },
               {
-                icon: <img className='w-full h-auto rounded-md object-cover' src='src/mact.jpeg' />,
+                icon: <img className='w-full h-auto rounded-md object-cover' src='https://iili.io/338DJ6P.jpg' />,
                 title: 'M.A.C.T Cases',
                 description: '',
               },

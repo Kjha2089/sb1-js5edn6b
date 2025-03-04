@@ -34,7 +34,7 @@ const Navbar: FC<props> = ({isMenuOpen, setIsMenuOpen}) => {
           >
              <img 
               className="h-20 w-35 object-contain" 
-              src="src/keshav-jha-and-associates-high-resolution-logo.png" 
+              src="https://iili.io/338DqAJ.png" 
               alt="Keshav Jha & Associates Logo" 
             />
             
