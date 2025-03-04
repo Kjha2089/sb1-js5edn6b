@@ -32,10 +32,15 @@ const Navbar: FC<props> = ({isMenuOpen, setIsMenuOpen}) => {
             className="flex items-center cursor-pointer"
             onClick={() => scrollToSection('home')}
           >
-            <BriefcaseLaw className="h-8 w-8 text-[#588157]" />
-            <span className="ml-2 text-xl font-bold text-[#588157]">
+             <img 
+              className="h-20 w-35 object-contain" 
+              src="src/keshav-jha-and-associates-high-resolution-logo.png" 
+              alt="Keshav Jha & Associates Logo" 
+            />
+            
+            {/* <span className="ml-2 text-xl font-bold text-[#588157]">
               Adv. Keshav Jha & Associates
-            </span>
+            </span> */}
           </div>
 
           {/* Desktop Navigation */}

@@ -77,32 +77,46 @@ function App() {
       {/* Hero Section */}
       <section
         id="home"
-        className="relative h-[100vh] bg-[#588157] flex items-center"
-        style={{backgroundImage: `url("https://static.vecteezy.com/system/resources/thumbnails/033/129/369/small_2x/3d-rendered-law-legal-system-justice-crime-concept-mallet-gavel-hammer-and-scales-on-table-ai-generative-photo.jpg")`, 
-                backgroundSize: "100%"}}
+        className="relative h-[70vh] bg-[#588157] flex items-center"
+        // style={{backgroundImage: `url(https://ibb.co/27tFxQRJ)`, backgroundSize: "100%"}}
       >
         <div className="absolute inset-0 bg-black opacity-30"></div>
         <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-3xl">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">
-              Justice & Excellence
-            </h1>
-            <p className="text-xl text-white mb-8">
-              Keshav Jha is a distinguished advocate based in Delhi, known for
-              his legal expertise and strategic insight. He specializes in
-              corporate law, criminal law, commercial disputes, cheque bounce
-              and constitutional matters. Keshav Jha has successfully
-              represented clients in the Delhi District Court and High Court,
-              where his sharp advocacy and client-focused approach have earned
-              him a stellar reputation. He combines deep legal knowledge with a
-              practical understanding of business needs, delivering innovative
-              solutions and favorable outcomes. Keshav Jha remains a trusted
-              name in the legal community, renowned for his commitment to
-              excellence and justice.
-            </p>
-            <button className="bg-white text-[#588157] px-6 py-3 rounded-md font-medium hover:bg-[#a3b18a] hover:text-[#a3b18a] transition duration-300" onClick={() => scrollToSection('contact')}>
-              Schedule Consultation
-            </button>
+          <div className="flex flex-col md:flex-row items-center justify-between">
+            <div className="max-w-3xl md:w-3/5">
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">
+                Justice & Excellence
+              </h1>
+              <p className="text-xl text-white mb-8">
+                Keshav Jha is a distinguished advocate based in Delhi, known for
+                his legal expertise and strategic insight. He specializes in
+                corporate law, criminal law, commercial disputes, cheque bounce
+                and constitutional matters. Keshav Jha has successfully
+                represented clients in the Delhi District Court and High Court,
+                where his sharp advocacy and client-focused approach have earned
+                him a stellar reputation. He combines deep legal knowledge with a
+                practical understanding of business needs, delivering innovative
+                solutions and favorable outcomes. Keshav Jha remains a trusted
+                name in the legal community, renowned for his commitment to
+                excellence and justice.
+              </p>
+              <button className="bg-white text-[#588157] px-6 py-3 rounded-md font-medium hover:bg-[#a3b18a] hover:text-white transition duration-300" onClick={() => scrollToSection('contact')}>
+                Schedule Consultation
+              </button>
+            </div>
+            <div className="hidden md:block md:w-2/5 pl-8">
+              <div className="bg-white p-4 rounded-lg shadow-lg">
+                <img 
+                  src="src/heroPhoto.jpeg" 
+                  alt="Legal Services" 
+                  className="w-full h-auto rounded-md object-cover"
+                />
+                {/* <div className="mt-4 p-4 bg-[#f5f5f5] rounded-md">
+                  <h3 className="text-xl font-bold text-[#588157] mb-2">Expert Legal Counsel</h3>
+                  <p className="text-gray-700">Providing exceptional legal services with a commitment to client success and justice.</p>
+                </div> */}
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -159,7 +173,8 @@ function App() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                icon: <Scale className="h-10 w-10 text-[#588157]" />,
+                // icon: <Scale className="h-10 w-10 text-[#588157]" />,
+                icon: <img className='w-full h-auto rounded-md object-cover' src='src/commercial.jpeg' />,
                 title: 'Commercial Cases',
                 description:
                   'Keshav jha and associates provides litigation support in disputes such as contract law, property cases, N.I cases, and corporate cases. We further provide legal consultancy to businesses in drafting, negotiating and enforcing contracts involving a wide range of commercial cases',
@@ -172,13 +187,14 @@ function App() {
                 ],
               },
               {
-                icon: <Scale className="h-10 w-10 text-[#588157]" />,
+                icon: <img className='w-full h-auto rounded-md object-cover' src='src/corporate.jpeg' />,
                 title: 'Corporate Law',
                 description:
                   'Expert guidance on business formation, contracts, mergers and acquisitions, and corporate governance.',
               },
               {
-                icon: <Users className="h-10 w-10 text-[#588157]" />,
+                // icon: <Users className="h-10 w-10 text-[#588157]" />,
+                icon: <img className='w-full h-auto rounded-md object-cover' src='src/matri.jpg' />,
                 title: 'Matrimonial Cases',
                 description:
                   'Compassionate representation in divorce, child custody, adoption, and other family matters.',
@@ -191,7 +207,7 @@ function App() {
                 ],
               },
               {
-                icon: <FileText className="h-10 w-10 text-[#588157]" />,
+                icon: <img className='w-full h-auto rounded-md object-cover' src='src/criminal.jpeg' />,
                 title: 'Criminal Cases',
                 description: 'Our service include:',
                 list: [
@@ -206,7 +222,7 @@ function App() {
               },
 
               {
-                icon: <BriefcaseLaw className="h-10 w-10 text-[#588157]" />,
+                icon: <img className='w-full h-auto rounded-md object-cover' src='src/civil2.jpg' />,
                 title: 'Civil Cases',
                 description:
                   'Skilled representation in civil litigation, dispute resolution, and trial advocacy.',
@@ -220,12 +236,12 @@ function App() {
                 ],
               },
               {
-                icon: <Scale className="h-10 w-10 text-[#588157]" />,
+                icon: <img className='w-full h-auto rounded-md object-cover' src='src/cheque.jpeg' />,
                 title: 'Cheque Bounce Cases',
                 description: '',
               },
               {
-                icon: <Scale className="h-10 w-10 text-[#588157]" />,
+                icon: <img className='w-full h-auto rounded-md object-cover' src='src/mact.jpeg' />,
                 title: 'M.A.C.T Cases',
                 description: '',
               },
@@ -234,7 +250,7 @@ function App() {
                 key={index}
                 className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition duration-300"
               >
-                <div className="mb-4">{area.icon}</div>
+                <div className="md:block md:w-4/5 pl-8">{area.icon}</div>
                 <h3 className="text-xl font-semibold text-[#588157] mb-3">
                   {area.title}
                 </h3>
@@ -334,20 +350,20 @@ function App() {
               {
                 quote:
                   "Keshavjha & Associates provided exceptional legal counsel during our company's merger. Their attention to detail and strategic approach made all the difference.",
-                author: 'David Chen',
-                company: 'CEO, TechVision Inc.',
+                author: 'Abhishek Sharma',
+                company: 'Industrialist',
               },
               {
                 quote:
                   'I was impressed by the personal attention and care I received throughout my case. The team was always available to answer my questions and address my concerns.',
-                author: 'Amanda Rodriguez',
+                author: 'Divyansh',
                 company: 'Small Business Owner',
               },
               {
                 quote:
                   'Their expertise in estate planning helped our family navigate a complex situation with ease. I highly recommend their services to anyone seeking thorough legal guidance.',
-                author: 'Robert Johnson',
-                company: 'Retired Executive',
+                author: 'Ekta Sharma',
+                company: 'House Wife',
               },
             ].map((testimonial, index) => (
               <div key={index} className="bg-white p-8 rounded-lg shadow-md">
