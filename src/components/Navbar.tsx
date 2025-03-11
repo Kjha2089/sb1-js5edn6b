@@ -81,12 +81,12 @@ const Navbar: FC<props> = ({isMenuOpen, setIsMenuOpen}) => {
             >
               Contact
             </button>
-            <button
-              onClick={() => scrollToSection('contact')}
+            <a
+              href={"tel:" + 9718836537}
               className="bg-[#588157] text-white px-4 py-2 rounded-md font-medium hover:bg-[#a3b18a] transition duration-300"
             >
               +91 9718836537
-            </button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -145,12 +145,12 @@ const Navbar: FC<props> = ({isMenuOpen, setIsMenuOpen}) => {
             >
               Contact
             </button>
-            <button
-              onClick={() => scrollToSection('contact')}
-              className="bg-[#588157] text-white px-4 py-2 rounded-md font-medium hover:bg-[#a3b18a] transition duration-300 w-full"
+            <a
+              href={"tel:" + 9718836537}
+              className="bg-[#588157] text-white px-4 py-2 rounded-md font-medium hover:bg-[#a3b18a] transition duration-300"
             >
               +91 9718836537
-            </button>
+            </a>
           </div>
         </div>
       )}

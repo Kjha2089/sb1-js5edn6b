@@ -83,11 +83,11 @@ function App() {
         <div className="absolute inset-0 bg-black opacity-30"></div>
         <div className="container mx-auto px-6 relative z-10">
           <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className="max-w-3xl md:w-3/5">
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">
+            <div className="max-w-2xl md:w-2/5">
+              <h1 className="text-5xl md:text-3xl font-bold text-white mb-4">
                 Justice & Excellence
               </h1>
-              <p className="text-xl text-white mb-8">
+              <p className="hidden md:block text-md text-white mb-8">
                 Keshav Jha is a distinguished advocate based in Delhi, known for
                 his legal expertise and strategic insight. He specializes in
                 corporate law, criminal law, commercial disputes, cheque bounce
@@ -100,9 +100,12 @@ function App() {
                 name in the legal community, renowned for his commitment to
                 excellence and justice.
               </p>
-              <button className="bg-white text-[#588157] px-6 py-3 rounded-md font-medium hover:bg-[#a3b18a] hover:text-white transition duration-300" onClick={() => scrollToSection('contact')}>
-                Schedule Consultation
-              </button>
+              <button className="relative inline-block font-medium group py-1.5 px-2.5 " onClick={() => scrollToSection('contact')}>
+<span className="absolute inset-0 w-full h-full transition duration-400 ease-out transform translate-x-1 translate-y-1 bg-[#588157] group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+<span className="absolute inset-0 w-full h-full bg-white border border-[#588157] group-hover:bg-[#588157]"></span>
+<span className="relative text-[#588157] ">schedule consultation</span>
+</button>
+
             </div>
             <div className="hidden md:block md:w-2/5 pl-8">
               <div className="bg-white p-4 rounded-lg shadow-lg">
